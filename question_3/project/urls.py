@@ -8,5 +8,5 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     url(r'^api/_add$', views.add_movie, name='add_movie'),
     url(r'^api/_delete/(?P<movie_id>\S+)/$', views.delete_movie, name='delete_movie'),
-    url(r'^movie/(?P<movie_title>.+)/$', views.get_movie, name='get_movie'),
+    url(r'^movie/(?P<movie_title>\w+)/$', views.get_movie, name='get_movie'),
 )

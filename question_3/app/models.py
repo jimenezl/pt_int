@@ -10,6 +10,9 @@ class Movies(models.Model):
     year = models.TextField()
     genre = models.TextField()
 
+    def space_free_title(self):
+        return self.title.replace(' ', '_')
+
     def __unicode__(self):
         return self.title
 
