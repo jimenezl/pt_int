@@ -1,11 +1,13 @@
-{% extends "base.html" %}
-{% block body %}
 <title> {{ movie.title }} </title>
+{% load static %}
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static "base.css" %}">
+</head>
 <div class="main">
 	<h1>{{ movie.title }}</h1>
 	<p id="data">
 	Genre: {{ movie.genre }}
+	
 	Year: {{ movie.year }}
 	</p>
 </div>
-{% endblock %}
