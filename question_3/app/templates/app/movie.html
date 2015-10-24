@@ -1,13 +1,9 @@
 {% extends "base.html" %}
 {% block body %}
 
-
-
-
-
 <div class="main">
-	<h1>Movie Database</h1>
-	<h2>Add a Movie <span class="status"></span></h2>
+	<h1>{{ movie.title }}</h1>
+	<!-- <h2>Add a Movie <span class="status"></span></h2>
 	<form action="{% url 'app.views.add_movie'%}" method="post" class="add-movie">
 		<dl>
 			<dd>Title:</dd>
@@ -25,6 +21,6 @@
 		<li data-id="{{ movie.id }}"><span class="title">{{ movie.title }}</span> ({{ movie.year }}) - {{ movie.genre}}<a class="delete">X</a></li>
 	{% endfor %}
 	</ol>
-	<div class="noMovies"><em>No movies yet... please, add some below!</em></div>
+	<div class="noMovies"><em>No movies yet... please, add some below!</em></div> -->
 </div>
 {% endblock %}

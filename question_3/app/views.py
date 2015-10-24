@@ -42,3 +42,11 @@ def delete_movie(request, movie_id):
 
     #return id for Front-end handling
     return HttpResponse(json.dumps({'result': 'ok', 'id': movie_id}))
+
+def get_movie(request, movie_title):
+    """Gets and displays a movie from the database"""
+
+    movie = Movies.objects.filter(id=movie_title)
+
+    #return id for Front-end handling
+    return render(request, 'movie.html', {'movie': movie})
