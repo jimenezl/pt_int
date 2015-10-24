@@ -26,7 +26,7 @@ def add_movie(request):
     # Generate New Record HTML; send back to Front-end
     new_record = Movies.objects.all().order_by('-id')[0]
     movie = {'id': new_record.id, 'title': new_record.title, 'year': new_record.year, 
-             'genre': new_record.genre}
+             'genre': new_record.genre, 'space_free_title': new_record.space_free_title}
     new_record_HTML = render(request, 'new_row.html', {'movie': movie})
 
     # return as json 
